@@ -16,3 +16,6 @@
 
 # Log file
 *.log
+
+# direnv
+.envrc
