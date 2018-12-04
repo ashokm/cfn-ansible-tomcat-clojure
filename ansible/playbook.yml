@@ -1,0 +1,29 @@
+---
+- hosts: all
+  connection: local
+  tasks:
+    - name: Install Apache
+      yum:
+        name: httpd
+        state: latest
+
+    - name: Install Java
+      yum:
+        name: java-1.8.0-openjdk
+        state: present
+
+    - name: Install Tomcat
+      yum:
+        name: tomcat8
+        state: present
+
+    - name: Download WAR file
+      get_url:
+        url: http://d2io1hx8u877l0.cloudfront.net/2-collectors/clojure-collector/clojure-collector-1.1.0-standalone.war
+        dest: /usr/share/tomcat8/webapps/clojure-collector-1.1.0-standalone.war
+        mode: 0644
+
+    - name: Restart Tomcat
+      service:
+        name: tomcat8
+        state: restarted
