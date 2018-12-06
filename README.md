@@ -55,7 +55,7 @@ Full list of parameters:
 | --------------- | ----------------------------------------------------------------- | ------------------------------------- |
 | VpcId           | VpcId of your existing Virtual Private Cloud (VPC)                |                                       |
 | Subnets         | The list of SubnetIds in your Virtual Private Cloud (VPC)         |                                       |
-| InstanceType    | WebServer EC2 instance type                                       | t2.micro                              |
+| InstanceType    | WebServer EC2 instance type                                       | m1.small                              |
 | OperatorEMail   | EMail address to notify if there are any scaling operations       |                                       |
 | KeyName         | The EC2 Key Pair to allow SSH access to the instances             |                                       |
 | SSHLocation     | The IP address range that can be used to SSH to the EC2 instances | 0.0.0.0/0                             |
