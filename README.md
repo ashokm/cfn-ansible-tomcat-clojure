@@ -40,13 +40,13 @@ export AWS_SECRET_ACCESS_KEY=CKjzh7SHDwsxT2B93zL954wVMhHjaSnMtn6FNGt4
 You can create the stack using the following example (replacing the parameter values with your own):
 
 ```
-aws cloudformation create-stack --stack-name ashokm-stack \
+aws cloudformation create-stack --stack-name whatever-stack \
 --template-body file://./cfn-template.json \
 --parameters \
 ParameterKey=VpcId,ParameterValue="vpc-93d63df7" \
 ParameterKey=Subnets,ParameterValue="subnet-f955849d\\,subnet-7308f105" \
-ParameterKey=OperatorEMail,ParameterValue="ashokmanji@hotmail.com" \
-ParameterKey=KeyName,ParameterValue="ashokm-keypair"
+ParameterKey=OperatorEMail,ParameterValue="whatever@example.com" \
+ParameterKey=KeyName,ParameterValue="whatever-keypair"
 ```
 
 Full list of parameters:
@@ -65,11 +65,11 @@ Full list of parameters:
 To see the status of the CloudFormation stack, use the describe-stacks command.
 
 ```
-aws cloudformation describe-stacks --stack-name ashokm-stack
+aws cloudformation describe-stacks --stack-name whatever-stack
 ```
 To delete the CloudFormation stack, use the delete-stack command.
 ```
-aws cloudformation delete-stack --stack-name ashokm-stack
+aws cloudformation delete-stack --stack-name whatever-stack
 ```
 
 Note that the `UserData` property within the template will pull down this GitHub repo and execute the Ansible run.
@@ -94,4 +94,4 @@ Providing all of the above runs successfully and the ALB Health Checks are in a 
 
 ### License and Authors
 
-* Author: Ashok Manji (<ashokmanji@hotmail.com>)
+* Author: Ashok Manji
